@@ -1,0 +1,9 @@
+version: '3' # version
+services: # service
+ angular-service: # Name of services
+     container_name: angular-docker-container # setting up container name
+     build: ./angularProject # location of dockerfile
+     ports:
+      - '4200:4200' # port mapping
+     command:
+      bash -c "npm install && ng serve --host 0.0.0.0 --port 4200" # to execute
